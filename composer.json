@@ -1,0 +1,20 @@
+{
+    "name": "awons/phpbyexample_cache",
+    "autoload": {
+        "psr-4": {
+            "AWons\\PhpByExample\\Cache\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Aleksander Wons",
+            "email": "aleksander.wons@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8",
+        "monolog/monolog": "^2.3",
+        "psr/log": "^3.0"
+    },
+    "minimum-stability": "stable"
+}
