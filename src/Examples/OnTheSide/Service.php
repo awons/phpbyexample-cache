@@ -13,13 +13,15 @@ use AWons\PhpByExample\Cache\Persistence\Repository;
 
 class Service
 {
+    private const CACHE_KEY_ALL_BOOKS = 'all_books';
+
     public function __construct(private Repository $repoistory, private Cache $cache)
     {
     }
 
     public function getAllBooks(): BooksCollection
     {
-        $cacheKey = new CacheKey('all_books');
+        $cacheKey = new CacheKey(self::CACHE_KEY_ALL_BOOKS);
 
         if (!$this->cache->has($cacheKey)) {
             $books = $this->repoistory->getBooks();
@@ -37,6 +39,6 @@ class Service
     {
         $this->repoistory->updateTitle($id, $title);
 
-        $this->cache->delete(new CacheKey('all_books'));
+        $this->cache->delete(new CacheKey(self::CACHE_KEY_ALL_BOOKS));
     }
 }
