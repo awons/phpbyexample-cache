@@ -25,3 +25,10 @@ php bin/on-the-side.php
 ./bin/cleanup-db.sh
 php bin/read-through.php
 ```
+
+#### Write-through cache
+
+```bash
+./bin/cleanup-db.sh
+php bin/write-through.php
+```
