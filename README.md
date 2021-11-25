@@ -18,3 +18,10 @@ composer install
 ./bin/cleanup-db.sh
 php bin/on-the-side.php
 ```
+
+#### Read-through cache
+
+```bash
+./bin/cleanup-db.sh
+php bin/read-through.php
+```
