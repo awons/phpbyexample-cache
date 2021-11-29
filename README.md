@@ -15,27 +15,23 @@ composer install
 #### Cache on the side
 
 ```bash
-./bin/cleanup-db.sh
-php bin/on-the-side.php
+make run-on-the-side
 ```
 
 #### Read-through cache
 
 ```bash
-./bin/cleanup-db.sh
-php bin/read-through.php
+make run-read-through
 ```
 
 #### Write-through cache
 
 ```bash
-./bin/cleanup-db.sh
-php bin/write-through.php
+make run-write-through
 ```
 
 #### Write-read-through cache
 
 ```bash
-./bin/cleanup-db.sh
-php bin/write-read-through.php
+make run-write-read-through
 ```
