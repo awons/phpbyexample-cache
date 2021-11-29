@@ -40,6 +40,19 @@ foreach ($books as $book) {
     );
 }
 
+$logger->info('Looking for books');
+$books = $readService->getAllBooks();
+
+foreach ($books as $book) {
+    $logger->info(
+        sprintf(
+            'Book [%s] by [%s]',
+            $book->getTitle()->asString(),
+            $book->getAuthor()->asString()
+        )
+    );
+}
+
 $cachedWriteRepository = new CachedWriteRepository(new DbWriteRepository($dbRepository), $cache);
 $writeService = new WriteService($cachedWriteRepository);
 
@@ -52,6 +65,19 @@ $logger->info('Looking for books');
 $books = $readService->getAllBooks();
 
 /** @var Book $book */
+foreach ($books as $book) {
+    $logger->info(
+        sprintf(
+            'Book [%s] by [%s]',
+            $book->getTitle()->asString(),
+            $book->getAuthor()->asString()
+        )
+    );
+}
+
+$logger->info('Looking for books');
+$books = $readService->getAllBooks();
+
 foreach ($books as $book) {
     $logger->info(
         sprintf(
