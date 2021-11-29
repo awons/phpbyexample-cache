@@ -32,3 +32,10 @@ php bin/read-through.php
 ./bin/cleanup-db.sh
 php bin/write-through.php
 ```
+
+#### Write-read-through cache
+
+```bash
+./bin/cleanup-db.sh
+php bin/write-read-through.php
+```
